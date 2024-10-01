@@ -6,6 +6,9 @@
 
 .todolist-header {
   font-weight: bold;
+  color: skyblue;
+  font-size: 60px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;

@@ -2,10 +2,12 @@
 
 .todo-list {
   margin-top: 40px;
+  color: skyblue;
+  font-family: ;
 }
 
 .todo-completed {
-  border: 2px gray;
+  border: 2px rgb(232, 204, 204);
 }
 
 .todo-pending {
@@ -19,7 +21,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(222, 115, 115);
 }
 
 .todo-pending:first-child,
@@ -42,7 +44,7 @@
 
 .todo-item {
   font-size: 18px;
-  color: black;
+  color: rgb(250, 250, 250);
   padding-left: 20px;
 }
 
@@ -51,7 +53,7 @@
 }
 
 .todo-item del {
-  color: darkslategrey;
+  color: rgb(181, 221, 239);
 }
 
 /* *icons */
@@ -62,7 +64,7 @@
 }
 
 .todo-mark-icon:hover {
-  color: blue;
+  color: skyblue;
 }
 
 .todo-edit-delete-icon {
@@ -84,7 +86,7 @@
 }
 
 .edit-icon:hover {
-  color: darkgoldenrod;
+  color: rgb(244, 225, 225);
 }
 
 .delete-icon:hover {

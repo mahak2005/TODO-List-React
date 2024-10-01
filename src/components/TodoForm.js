@@ -24,7 +24,7 @@ const TodoForm = (props) => {
     });
     setInput("");
   };
-
+  
   return (
     <form onSubmit={handleSubmit}>
       <div className="todo-input-form">
@@ -43,7 +43,7 @@ const TodoForm = (props) => {
           </>
         ) : (
           <>
-            <MdOutlineEditNote size={35} />
+            <MdOutlineEditNote size={45} color="skyblue" />
             <input
               placeholder="Add a todo"
               value={input}
