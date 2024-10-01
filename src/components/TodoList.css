@@ -1,9 +1,6 @@
-/* todo list */
-
 .todo-list {
   margin-top: 40px;
   color: skyblue;
-  font-family: ;
 }
 
 .todo-completed {
@@ -54,41 +51,4 @@
 
 .todo-item del {
   color: rgb(181, 221, 239);
-}
-
-/* *icons */
-
-.todo-mark-icon {
-  cursor: pointer;
-  font-size: 27px;
-}
-
-.todo-mark-icon:hover {
-  color: skyblue;
-}
-
-.todo-edit-delete-icon {
-  padding: 0px 10px;
-}
-
-.todo-icons {
-  display: flex;
-  align-items: center;
-}
-
-.delete-icon,
-.edit-icon {
-  cursor: pointer;
-  font-size: 24px;
-  margin-right: 5px;
-  margin-left: 10px;
-  color: black;
-}
-
-.edit-icon:hover {
-  color: rgb(244, 225, 225);
-}
-
-.delete-icon:hover {
-  color: darkred;
 }

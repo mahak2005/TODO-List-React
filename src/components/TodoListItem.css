@@ -1,0 +1,53 @@
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.todo-text {
+    flex-grow: 1;
+}
+
+.todo-priority,
+.todo-category,
+.todo-deadline {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.todo-actions {
+    display: flex;
+    align-items: center;
+}
+
+.todo-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 24px;
+    /* Adjust size as needed */
+    transition: color 0.2s;
+}
+
+.todo-icon:hover {
+    color: #007bff;
+    /* Change color on hover */
+}
+
+.complete-icon {
+    color: green;
+    /* Color for complete icon */
+}
+
+.edit-icon {
+    color: orange;
+    /* Color for edit icon */
+}
+
+.delete-icon {
+    color: red;
+    /* Color for delete icon */
+}

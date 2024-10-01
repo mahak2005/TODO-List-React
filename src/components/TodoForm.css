@@ -1,31 +1,36 @@
-/* *input form */
-
 .todo-input-form {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* Spacing between inputs */
 }
 
 .todo-input {
-  font-size: 18px;
-  padding: 5px;
-  width: 500px;
-  max-width: 100%;
-  background-color: rgb(255, 255, 255);
-}
-
-.todo-input-edit {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   width: 100%;
-  color: rgb(241, 241, 250);
-  background-color:rgb(222, 115, 115);
+  /* Full width */
+  max-width: 400px;
+  /* Max width for input */
 }
 
-.todo-input,
-.todo-input-edit {
-  border: 0px;
-  border-bottom: 1px solid rgb(222, 115, 115);
+.add-todo-button {
+  padding: 10px 20px;
+  border: none;
+ 
+  border-radius: 5px;
+  background-color: skyblue;
+  /* Button color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
 }
 
-.todo-input:focus-visible,
-.todo-input-edit:focus-visible {
-  outline-style: none;
-  outline-width: 0px;
+.add-todo-button:hover {
+  background-color: deepskyblue;
+  /* Button hover color */
 }

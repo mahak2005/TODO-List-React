@@ -1,63 +1,47 @@
 import React from "react";
-import TodoForm from "./TodoForm";
-import {
-  RiCheckboxCircleFill,
-  RiCheckboxBlankCircleLine,
-} from "react-icons/ri";
-import { MdModeEditOutline, MdDeleteOutline } from "react-icons/md";
+import { MdCheckCircle, MdEdit, MdDelete } from "react-icons/md"; // Importing icons
+import "./TodoListItem.css";
 
-function TodoListItem({
-  todo,
-  completeTodo,
-  removeTodo,
-  submitUpdate,
-  edit,
-  setEdit,
-}) {
+const TodoListItem = ({ todo, completeTodo, removeTodo, submitUpdate, edit, setEdit }) => {
+  const handleComplete = () => {
+    completeTodo(todo.id);
+  };
+
+  const handleRemove = () => {
+    removeTodo(todo.id);
+  };
+
+  const handleEdit = () => {
+    setEdit({ id: todo.id, value: todo.text });
+  };
+
   return (
-    <>
-      <div className="todo-list-item">
-        <div className="todo-mark-icon">
-          {todo.isComplete ? (
-            <RiCheckboxCircleFill onClick={() => completeTodo(todo.id)} />
-          ) : (
-            <RiCheckboxBlankCircleLine
-              onClick={() => completeTodo(todo.id)}
-              // className="todo-mark-icon"
-            />
-          )}
-        </div>
-
-        <div className="todo-item">
-          {todo.isComplete ? (
-            <p>
-              <del>{todo.text}</del>
-            </p>
-          ) : edit.id === todo.id ? (
-            <TodoForm edit={edit} onSubmit={submitUpdate} />
-          ) : (
-            <p> {todo.text} </p>
-          )}
-        </div>
+    <div className="todo-item">
+      <div className="todo-text">
+        <span>{todo.text}</span>
+        <span className="todo-priority">Priority: {todo.priority}</span>
+        <span className="todo-category">Category: {todo.category}</span>
+        <span className="todo-deadline">Deadline: {todo.deadline}</span>
       </div>
-      <div className="todo-icons">
-        {!todo.isComplete && (
-          <MdModeEditOutline
-            onClick={() => setEdit({ id: todo.id, value: todo.text })}
-            className="edit-icon"
-          />
-        )}
-        <MdDeleteOutline
-          onClick={() => removeTodo(todo.id)}
-          className="delete-icon"
+      <div className="todo-actions">
+        <MdCheckCircle
+          onClick={handleComplete}
+          className="todo-icon complete-icon"
+          title="Complete"
+        />
+        <MdEdit
+          onClick={handleEdit}
+          className="todo-icon edit-icon"
+          title="Edit"
+        />
+        <MdDelete
+          onClick={handleRemove}
+          className="todo-icon delete-icon"
+          title="Remove"
         />
       </div>
-    </>
+    </div>
   );
-}
-
-TodoListItem.defaultProps = {
-  edit: { id: null, value: "" },
 };
 
 export default TodoListItem;
