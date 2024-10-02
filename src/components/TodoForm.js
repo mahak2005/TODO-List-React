@@ -54,7 +54,7 @@ const TodoForm = (props) => {
           </>
         ) : (
           <>
-            <MdOutlineEditNote size={45} color="skyblue" />
+            <MdOutlineEditNote size={45} color="#031820" />
             <input
               placeholder="Add a todo"
               value={input}
@@ -91,6 +91,7 @@ const TodoForm = (props) => {
               <option value="" disabled>
                 Select Category
               </option>
+              <option value="work">Enjoy</option>
               <option value="work">Work</option>
               <option value="school">School</option>
               <option value="home">Home</option>

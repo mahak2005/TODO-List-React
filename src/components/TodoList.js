@@ -41,13 +41,13 @@ const TodoList = ({ todos, completeTodo, removeTodo, updateTodo }) => {
               </div>
             ))
           ) : (
-            <p>Todo list is empty</p>
+            <p><h5>Todo list is empty</h5></p>
           )}
         </div>
 
         {completedTodo.length > 0 && (
           <div className="todo-list">
-            <h6>Completed Tasks</h6>
+            <h5>Completed Tasks</h5>
             <hr />
           </div>
         )}
